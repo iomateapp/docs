@@ -2,7 +2,7 @@
 
 ## Requisitos
 
-A API foi desenvolvida para ser executada em Python com [computação em nuvem sem servidor](https://aws.amazon.com/serverless/) com os servidores da [AWS](https://aws.amazon.com/free/). 
+A API foi desenvolvida para ser executada em Python com [computação em nuvem sem servidor](https://aws.amazon.com/serverless/) com os serviços da [AWS](https://aws.amazon.com/free/). 
 Para efetuar o deploy ou executar o projeto localmente é necessário instalar o [Python3](https://www.python.org/downloads/) e [AWS CLI](https://aws.amazon.com/cli/). 
 !!! warning
 
