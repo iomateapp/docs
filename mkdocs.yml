@@ -73,3 +73,8 @@ theme:
     - header.autohide
     - navigation.sections
     - navigation.top
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
