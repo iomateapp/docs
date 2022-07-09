@@ -1,0 +1,7 @@
+:root > * {
+    --md-primary-fg-color: #00213b;
+}
+
+a:not([class]) {
+    color: #3071a3;
+}

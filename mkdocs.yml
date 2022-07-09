@@ -1,5 +1,10 @@
 site_name: ''
 site_url: https://docs.iomate.app/
+repo_url: https://github.com/iomateapp
+
+extra_css:
+  - stylesheets/extra.css
+
 nav:
   - Introduction: index.md
   - Getting started:
@@ -12,13 +17,14 @@ nav:
       - Robot: contribution-robot.md
       - Studio: contribution-studio.md
   - Community: community.md
-repo_url: https://github.com/iomateapp
+
 extra:
   social:
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/iomateapp
     - icon: fontawesome/brands/linkedin 
       link: https://linkedin.com/company/iomateapp
+
   consent:
     title: Cookie consent
     description: >- 
@@ -33,6 +39,7 @@ extra:
     actions:
       - accept
       - manage
+
 theme:
   name: material
   logo: assets/iomate-logo-web-white.png
@@ -46,11 +53,22 @@ theme:
     - name: Portuguese
       link: /pt/
       lang: pt
+
   font:
     text: Roboto
+
   palette:
-    scheme: default
-    primary: #fcba03
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
   features:
     - header.autohide
     - navigation.sections
