@@ -3,7 +3,7 @@
 ## Requisitos
 
 A API foi desenvolvida para ser executada em Python com [computação em nuvem sem servidor](https://aws.amazon.com/serverless/) com os serviços da [AWS](https://aws.amazon.com/free/). 
-Para efetuar o deploy ou executar o projeto localmente é necessário instalar o [Python3](https://www.python.org/downloads/) e [AWS CLI](https://aws.amazon.com/cli/). 
+Para efetuar o deploy ou executar o projeto localmente é necessário instalar os requisitos listados abaixo. 
 !!! warning
 
     Antes de prosseguir tenha certeza de que efetuou as seguintes instalações:
@@ -36,15 +36,18 @@ Comece isolando seu projeto em um [ambiente virtual](https://docs.python.org/3/l
 python3 -m venv env
 ```
 
-Ative o ambiente virtual criado para instalar a suas dependências.
+Ative o [ambiente virtual](https://docs.python.org/3/library/venv.html) criado para instalar a suas dependências.
 
-```bash
-#Windows
-./env/Scripts/Activate
+=== "Windows"
 
-# Linux / macOS
-source ./env/bin/activate
-```
+    ``` bash
+    ./env/Scripts/Activate
+    ```
+
+=== "Linux / MacOS"
+    ``` bash 
+    source ./env/bin/activate
+    ```
 
 Use o gerenciador de pacotes [pip3](https://pip.pypa.io/en/stable/) para instalar as dependências do projeto.
 
@@ -52,14 +55,26 @@ Use o gerenciador de pacotes [pip3](https://pip.pypa.io/en/stable/) para instala
 pip3 install -r requirements.txt
 ```
 
-### Configurando o Serverless Framework
-Utilizamos o [Serverless Framework](https://www.serverless.com/framework) para publicar e executar localmente o projeto.
+### Configurando o MongoDB
+O projeto IOmate utiliza o [MongoDB](https://www.mongodb.com/) para armazenamento e transição de dados. Para executar a aplicação é necessário de uma instância do banco de dados à disposição. É possível utilizar o [MongoDB SAAS](https://www.mongodb.com/try) ou instalar e configurar o [MongoDB localmente](https://www.mongodb.com/try/download).
 
-Instale os plugins utilizados no projeto para conseguir publicar e executar a API.
+
+### Configurando o Serverless Framework
+Para publicar ou executar localmente o projeto utilizamos o [Serverless Framework](https://www.serverless.com/framework).
+
+Instale os plugins do [Serverless Framework](https://www.serverless.com/framework) utilizados no projeto para publicar e executar a API.
 ```bash
-serverless plugin install -n serverless-python-requirements
-serverless plugin install -n serverless-offline
+npm install
 ```
+
+Após instalar os plugins é necessário configurar as variáveis de ambiente. Para isso você deve criar um arquivo `.env` na raiz do seu projeto. O arquivo `.env` deve seguir o exemplo abaixo substituindo os valores da sua aplicação.
+```bash
+MONGO_URI=mongodb+srv://user:password@example.example.net
+```
+
+!!! warning
+
+    O arquivo `.env` contém todos os dados sensíveis da aplicação, por esse motivo jamais compartilhe esse documento.
 
 
 ## Execução e Publicação
@@ -72,6 +87,12 @@ serverless offline
 ### Publicar
 Para publicar o projeto com a sua conta AWS utilize o [Serverless Framework](https://www.serverless.com/framework).
 
+Instalação com `stage` e `region` informados no `serverless.yml`:
 ```bash
 serverless deploy
+```
+
+Instalação com `stage` e `region` personalizados:
+```bash
+serverless deploy --stage {custom_stage} --region {custom_region}
 ```
