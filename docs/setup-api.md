@@ -28,6 +28,9 @@ git clone https://github.com/iomateapp/api.git
 ```
 
 Ao finalizar abra o terminal e navegue até o diretório do projeto clonado.
+```bash
+cd api
+```
 
 ### Instalando as dependências
 Comece isolando seu projeto em um [ambiente virtual](https://docs.python.org/3/library/venv.html).
