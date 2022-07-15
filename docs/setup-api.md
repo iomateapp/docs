@@ -2,11 +2,11 @@
 
 ## Requisitos
 
-A API foi desenvolvida para ser executada em Python com [computação em nuvem sem servidor](https://aws.amazon.com/serverless/) com os serviços da [AWS](https://aws.amazon.com/free/). 
-Para efetuar o deploy ou executar o projeto localmente é necessário instalar os requisitos listados abaixo. 
+The API was built with and designed to run [serverless with AWS services](https://aws.amazon.com/serverless/). 
+
 !!! warning
 
-    Antes de prosseguir tenha certeza de que efetuou as seguintes instalações:
+    To proceed with the next steps, you need to follow these prerequisites
 
     - [GIT](https://git-scm.com/)
     
@@ -16,30 +16,30 @@ Para efetuar o deploy ou executar o projeto localmente é necessário instalar o
 
     - [Serverless Framework](https://www.serverless.com/framework)
 
-Para mais informações de como configurar o AWS CLI confira o [Getting started with the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
-    
+For more information on how to configure the AWS CLI we recommend that you take a look at the [Official Documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
 
-## Configuração
-### Clonando o repositório
-Clone o repositório da [API](https://github.com/iomateapp/api) em seu workspace.
+## Configuration
+
+### Clonning the repository
+Clone the repository into your workspace.
 
 ```bash
-git clone https://github.com/iomateapp/api.git
+git clone https://github.com/{your_user}/api.git
 ```
 
-Ao finalizar abra o terminal e navegue até o diretório do projeto clonado.
+After finishing, navigate to the project directory.
 ```bash
 cd api
 ```
 
-### Instalando as dependências
-Comece isolando seu projeto em um [ambiente virtual](https://docs.python.org/3/library/venv.html).
+### Installing dependencies
+Start by isolating your project in a [virtual environment](https://docs.python.org/3/library/venv.html).
 
 ```bash
 python3 -m venv env
 ```
 
-Ative o [ambiente virtual](https://docs.python.org/3/library/venv.html) criado para instalar a suas dependências.
+Activate the [virtual environment](https://docs.python.org/3/library/venv.html) created to install your dependencies.
 
 === "Windows"
 
@@ -52,14 +52,15 @@ Ative o [ambiente virtual](https://docs.python.org/3/library/venv.html) criado p
     source ./env/bin/activate
     ```
 
-Use o gerenciador de pacotes [pip3](https://pip.pypa.io/en/stable/) para instalar as dependências do projeto.
+Use the package manager [pip3](https://pip.pypa.io/en/stable/) to install the project dependencies.
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
 ### Configurando o MongoDB
-O projeto IOmate utiliza o [MongoDB](https://www.mongodb.com/) para armazenamento e transição de dados. Para executar a aplicação é necessário de uma instância do banco de dados à disposição. É possível utilizar o [MongoDB SAAS](https://www.mongodb.com/try) ou instalar e configurar o [MongoDB localmente](https://www.mongodb.com/try/download).
+The IOmate uses [MongoDB](https://www.mongodb.com/) for data storage and transition. 
+Para executar a aplicação é necessário de uma instância do banco de dados à disposição. É possível utilizar o [MongoDB SAAS](https://www.mongodb.com/try) ou instalar e configurar o [MongoDB localmente](https://www.mongodb.com/try/download).
 
 
 ### Configurando o Serverless Framework

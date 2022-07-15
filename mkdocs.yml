@@ -12,14 +12,13 @@ nav:
       - API: setup-api.md
       - Robot: setup-robot.md
       - Studio: setup-studio.md
-    - Contribution Guide:
-      - API: contribution-api.md
-      - Robot: contribution-robot.md
-      - Studio: contribution-studio.md
-  - Community: community.md
+  - Contribution Guide: contribution.md
+  # - Community: community.md
 
 extra:
   social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/iomateapp
     - icon: fontawesome/brands/twitter 
       link: https://twitter.com/iomateapp
     - icon: fontawesome/brands/linkedin 

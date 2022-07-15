@@ -1,17 +1,55 @@
-# Welcome to MkDocs
+# Setup Studio Guide
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+The studio  managing the application data and building the automations that will be executed by the robot device.
 
-## Commands
+### Prerequisites
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+!!! warning
+    To proceed with the next steps you need to have [Nodejs 16 (or higher)](https://nodejs.org/en/) installed on your machine
 
-## Project layout
+### Clonning the repository
+Clone the repository into your workspace.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+```bash
+git clone https://github.com/{your_user}/studio.git
+cd studio
+```
+
+### Installing dependencies
+
+```bash
+npm install
+```
+
+### Available Scripts
+
+In the project directory, you can run:
+
+```bash
+npm start
+```
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+```bash
+npm test
+```
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+```bash
+npm run build
+```
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
